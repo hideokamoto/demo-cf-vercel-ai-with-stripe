@@ -2,8 +2,19 @@
 
 import { useChat } from '@ai-sdk/react';
 
-export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+export type ChatProps = {
+    apiPath: string;
+    iniiialMessage: string;
+}
+export default function Chat(props: ChatProps) {
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
+    api: props.apiPath,
+    initialMessages: [{
+        id: '0',
+        content: props.iniiialMessage,
+        role: 'assistant'
+    }]
+  });
   return (
     <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
       {messages.map(m => (
