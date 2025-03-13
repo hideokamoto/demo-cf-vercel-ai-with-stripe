@@ -1,5 +1,7 @@
 # Demo Chat Agent with Vercel AI SDK, Cloudflare, Next.js, and Stripe
 
+[日本語](README-ja.md)
+
 This demo application showcases an AI chat agent built with Vercel AI SDK, Cloudflare, Next.js, and Stripe for usage-based billing. The application features two chat interfaces:
 
 1. A simple AI chat using Anthropic's Claude model
